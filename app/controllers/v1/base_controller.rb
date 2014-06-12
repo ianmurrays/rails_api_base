@@ -15,6 +15,23 @@ private
     end
   end
 
+  # Public: Send errors to the clients.
+  #
+  # code  - Internal code for the error, useful if you want to obscure errors for security
+  # error - A description of what happened
+  # data  - Further data you might want to send to the client
+  # 
+  def send_error(code, status = :bad_request, error = nil, data = nil)
+    error_hash = {
+      code: code
+    }
+
+    error_hash[:message] = error if error
+    error_hash[:data]    = data if data
+
+    render json: error_hash, status: status
+  end
+
   def current_user
     @current_user
   end
