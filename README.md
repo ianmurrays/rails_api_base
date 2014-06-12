@@ -4,7 +4,7 @@ This is a simple base for a Rails API server. It uses [versionist](https://githu
 
 ## How does authentication work?
 
-The user model `has_many` authentication tokens that have (or don't have) expiration dates. Each time a client want an authentication token, they have to POST to /v1/authenticate:
+The user model `has_many` authentication tokens that have (or don't have) expiration dates. Each time a client wants an authentication token, they have to POST to /v1/authenticate:
 
     $ curl -X POST -d '{"email": "email@example.org", "password": "123"}' -H "Content-Type: application/json" http://localhost:3000/v1/authenticate
     
