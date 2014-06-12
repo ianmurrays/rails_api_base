@@ -109,6 +109,10 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    versionist (1.3.0)
+      rails (>= 3)
+      yard (~> 0.7)
+    yard (0.8.7.4)
 
 PLATFORMS
   ruby
@@ -125,3 +129,4 @@ DEPENDENCIES
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
+  versionist
